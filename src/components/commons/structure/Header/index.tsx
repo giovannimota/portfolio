@@ -1,13 +1,12 @@
 // External Libraries
 import React from 'react'
+import { useRouter } from 'next/router'
 
 // Components
 import { Button } from '@components/toolkit/buttons/Button'
-import { Typography } from '@components/toolkit/Typography'
 
 // Styles
 import { ButtonsRow, Container } from './styles'
-import { useRouter } from 'next/router'
 
 interface Props {
   // Props
@@ -29,8 +28,8 @@ export const Header: React.FC<Props> = (
       path: '/redux'
     },
     {
-      label: 'Animations',
-      path: '/animations'
+      label: 'Star Wars API',
+      path: '/star-wars'
     }
   ]
 
@@ -54,7 +53,7 @@ export const Header: React.FC<Props> = (
 
   return (
     <Container>
-      <Typography>Giovanni Mota</Typography>
+      <h1>Giovanni Mota</h1>
 
       <ButtonsRow>{renderButtons()}</ButtonsRow>
     </Container>
