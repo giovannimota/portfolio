@@ -17,24 +17,4 @@ export const Content = styled.div`
   flex-direction: column;
 
   gap: 1rem;
-  padding: 1rem;
-`
-
-export const Grid = styled.div`
-  display: grid;
-
-  grid-template-columns: 282px 1fr;
-  gap: 1rem;
-`
-
-export const IntroContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`
-
-export const IntroTitle = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 `

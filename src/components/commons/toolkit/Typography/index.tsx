@@ -1,15 +1,27 @@
 // External Libraries
 import React, { PropsWithChildren } from 'react'
 
-// Components
+// Types
+import { TypographyVariants } from './types'
 
 // Styles
-import { Container } from './styles'
+import { StyledTypography } from './styles'
 
 interface Props extends PropsWithChildren {
-  // Props
+  color?: string
+  as?: React.ElementType
+  variant?: TypographyVariants
 }
 
-export const Typography: React.FC<Props> = ({ children }) => {
-  return <Container>{children}</Container>
+export const Typography: React.FC<Props> = ({
+  children,
+  color,
+  as = 'span',
+  variant = 'body'
+}) => {
+  return (
+    <StyledTypography as={as} $color={color} $variant={variant}>
+      {children}
+    </StyledTypography>
+  )
 }
