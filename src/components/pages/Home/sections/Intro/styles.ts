@@ -1,18 +1,27 @@
+import { breakpoints } from '@styles/breakpoints'
 import styled from 'styled-components'
 
 export const Container = styled.div`
   height: calc(100vh - 4rem);
 
   display: flex;
-  align-items: center;
   justify-content: center;
 `
 
 export const Grid = styled.div`
   display: grid;
 
+  align-items: center;
   grid-template-columns: 282px 1fr;
   gap: 1rem;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+  }
 `
 
 export const IntroContainer = styled.div`

@@ -8,7 +8,10 @@ const theme = {
       secondary: '#999999',
       disabled: '#666666',
       placeholder: '#444444'
-    }
+    },
+
+    black: '#000000',
+    white: '#FFFFFF'
   }
 }
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { breakpoints } from '@styles/breakpoints'
 
 interface ContainerProps {
   $isActive?: boolean
@@ -22,5 +23,9 @@ export const Container = styled(Link)<ContainerProps>`
   &:hover {
     color: #fff;
     border: 1px solid #106ec7;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 1rem 2rem;
   }
 `

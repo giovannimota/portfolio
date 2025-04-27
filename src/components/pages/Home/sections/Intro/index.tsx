@@ -27,6 +27,7 @@ export const Intro: React.FC<Props> = (
         <IntroContainer>
           <IntroTitle>
             <TextScramble text="I'm" textVariant="h4" />
+
             <TextScramble
               text="Giovanni Mota"
               textVariant="h4"
@@ -40,6 +41,18 @@ export const Intro: React.FC<Props> = (
             I have a little bit more than 4 years of experience. I develop web
             and mobile applications, i have knowledge in React, React Native,
             NextJS and Figma.
+          </Typography>
+
+          <Typography>
+            I am also develop some projects with SwiftUI, NodeJS (Express) and
+            Java (Spring Boot).
+          </Typography>
+
+          <Typography>So, welcome to my portfolio!</Typography>
+
+          <Typography>
+            Scroll down to know more about me and feel free to explore the other
+            tabs.
           </Typography>
         </IntroContainer>
       </Grid>

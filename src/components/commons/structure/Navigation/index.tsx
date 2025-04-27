@@ -1,13 +1,20 @@
 // External Libraries
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 
 // Components
 import { Button } from '@components/toolkit/buttons/Button'
+import { NavButton } from './components/NavButton'
 
 // Styles
-import { ButtonsRow, Container } from './styles'
-import { NavButton } from './components/NavButton'
+import {
+  ButtonsRow,
+  Container,
+  MenuTabsDropdown,
+  TitleContainer
+} from './styles'
+import { SandwichButton } from './components/SandwichButton'
+import Image from 'next/image'
 
 interface Props {
   // Props
@@ -18,6 +25,9 @@ export const Navigation: React.FC<Props> = (
     /* Props */
   }
 ) => {
+  // States
+  const [isOpen, setIsOpen] = useState(false)
+
   // Constants
   const HEADER_BUTTONS = [
     {
@@ -55,9 +65,25 @@ export const Navigation: React.FC<Props> = (
 
   return (
     <Container>
-      <h2>Giovanni Mota</h2>
+      <TitleContainer>
+        <Image
+          width={24}
+          height={24}
+          alt="Logo"
+          src="/images/portfolio-logo.png"
+        />
+
+        <h2>Giovanni Mota</h2>
+      </TitleContainer>
 
       <ButtonsRow>{renderButtons()}</ButtonsRow>
+
+      <SandwichButton
+        isOpen={isOpen}
+        onClick={() => setIsOpen(prev => !prev)}
+      />
+
+      <MenuTabsDropdown $isOpen={isOpen}>{renderButtons()}</MenuTabsDropdown>
     </Container>
   )
 }
