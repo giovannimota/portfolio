@@ -2,10 +2,15 @@ import { breakpoints } from '@styles/breakpoints'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 5rem);
 
   display: flex;
   justify-content: center;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: auto;
+    padding: 1rem;
+  }
 `
 
 export const Grid = styled.div`

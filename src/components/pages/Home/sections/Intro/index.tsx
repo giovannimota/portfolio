@@ -3,22 +3,14 @@ import React from 'react'
 
 // Components
 import { ProfileCard } from './components/ProfileCard'
+import TextScramble from '@components/toolkit/TextScramble'
+import { Typography } from '@components/toolkit/Typography'
 
 // Styles
 import { Container, Grid, IntroContainer, IntroTitle } from './styles'
 import theme from '@globals/theme'
-import TextScramble from '@components/toolkit/TextScramble'
-import { Typography } from '@components/toolkit/Typography'
 
-interface Props {
-  // Props
-}
-
-export const Intro: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
+export const Intro: React.FC = () => {
   return (
     <Container>
       <Grid>

@@ -1,25 +1,18 @@
 // External Libraries
 import React from 'react'
+import { useRouter } from 'next/router'
 
 // Components
+import { Tabs } from './components/Tabs'
+import { PeoplesView } from './views/PeoplesView'
+import { PlanetsView } from './views/PlanetsView'
 import { Header } from '@components/structure/Header'
+import { Navigation } from '@components/structure/Navigation'
 
 // Styles
 import { Container, Content } from './styles'
-import { Tabs } from './components/Tabs'
-import { useRouter } from 'next/router'
-import { PeoplesView } from './views/PeoplesView'
-import { PlanetsView } from './views/PlanetsView'
 
-interface Props {
-  // Props
-}
-
-export const StarWars: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
+export const StarWars: React.FC = () => {
   // Hooks
   const { query } = useRouter()
 
@@ -35,6 +28,8 @@ export const StarWars: React.FC<Props> = (
   return (
     <Container>
       <Header />
+
+      <Navigation />
 
       <Tabs />
 

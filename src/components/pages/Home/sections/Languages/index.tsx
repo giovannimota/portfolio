@@ -8,7 +8,8 @@ import { Language } from './components/Language'
 import { MY_LANGUAGES } from './constants'
 
 // Styles
-import { Container } from './styles'
+import { Container, LanguagesContainer } from './styles'
+import { Typography } from '@components/toolkit/Typography'
 
 interface Props {
   // Props
@@ -26,5 +27,11 @@ export const Languages: React.FC<Props> = (
     ))
   }
 
-  return <Container>{renderLanguages()}</Container>
+  return (
+    <Container>
+      <Typography variant="h2">Languages</Typography>
+
+      <LanguagesContainer>{renderLanguages()}</LanguagesContainer>
+    </Container>
+  )
 }

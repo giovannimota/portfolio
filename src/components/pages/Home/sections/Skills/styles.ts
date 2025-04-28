@@ -15,12 +15,15 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   gap: 0.75rem;
   padding: 1rem;
 `
 
 export const SkillsContainer = styled.div`
+  width: 100%;
+
   display: flex;
   flex-direction: column;
 
