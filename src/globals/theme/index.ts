@@ -10,6 +10,10 @@ const theme = {
       placeholder: '#444444'
     },
 
+    borders: {
+      default: '#6e6e6e'
+    },
+
     black: '#000000',
     white: '#FFFFFF'
   }

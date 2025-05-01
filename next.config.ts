@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: false,
   compiler: {
     styledComponents: true
+  },
+  images: {
+    domains: ['lh3.googleusercontent.com']
   }
 }
 
