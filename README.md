@@ -1,8 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# My Portfolio – Built with Next.js 🚀
 
-## Getting Started
+Welcome to my personal portfolio! 
 
-First, run the development server:
+This project showcases my work as a **Front-End Developer** and was built using [Next.js](https://nextjs.org), leveraging modern tools and best practices to deliver a fast, responsive, and accessible experience.
+
+
+## ✨ About
+
+This portfolio was designed and developed from scratch using:
+
+- **Next.js 15** – Server Components  
+- **TypeScript** – Strongly typed codebase  
+- **Vercel** – Production deployment with CI/CD
+
+I use this project to present my professional background, featured projects, and the technologies I work with. 
+
+It's also a sandbox where I explore new techniques and frameworks.
+
+
+## 🚀 Getting Started
+
+To run this project locally:
 
 ```bash
 npm run dev
@@ -13,28 +31,40 @@ pnpm dev
 # or
 bun dev
 ```
+Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure Highlights
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```pages/``` — Routing system with SSR and static generation
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```components/``` — Reusable UI components
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```styles/``` — Tailwind config and global styles
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```public/``` — Static assets
 
-## Learn More
+```lib/``` — Utilities and API helpers
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Built-in Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Responsive design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+SEO optimizations
 
-## Deploy on Vercel
+Deployed on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Learn More
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Want to dive deeper into the tools used here?
+
+[Next.js Docs](https://nextjs.org/docs) – Everything about the framework
+
+[TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) – Type-safe coding
+
+[Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) – Instant deployment and serverless support
+
+
+## 📦 Deploy
+This portfolio is deployed using Vercel, allowing seamless CI/CD and edge function support. You can easily deploy your own version with one click:
+
+👉 Deploy to [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
