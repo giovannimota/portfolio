@@ -1,10 +1,11 @@
 // External Libraries
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 // Components
-import { Button } from '@components/toolkit/buttons/Button'
 import { NavButton } from './components/NavButton'
+import { SandwichButton } from './components/SandwichButton'
 
 // Styles
 import {
@@ -13,8 +14,6 @@ import {
   MenuTabsDropdown,
   TitleContainer
 } from './styles'
-import { SandwichButton } from './components/SandwichButton'
-import Image from 'next/image'
 
 interface Props {
   // Props
@@ -35,12 +34,8 @@ export const Navigation: React.FC<Props> = (
       path: '/'
     },
     {
-      label: 'Redux',
-      path: '/redux'
-    },
-    {
-      label: 'Star Wars API',
-      path: '/star-wars'
+      label: 'Front-End',
+      path: '/front-end'
     }
   ]
 
