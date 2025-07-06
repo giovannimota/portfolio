@@ -1,3 +1,4 @@
+import { breakpoints } from '@styles/breakpoints'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -7,4 +8,8 @@ export const Container = styled.div`
 
   gap: 1rem;
   padding: 1rem;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+  }
 `

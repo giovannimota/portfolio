@@ -1,3 +1,4 @@
+import { breakpoints } from '@styles/breakpoints'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
@@ -22,6 +23,10 @@ export const Container = styled(motion.div)<ContainerProps>`
   border-radius: 0.75rem;
   border: 1px solid ${({ theme }) => theme.colors.border.default};
   background-color: ${({ theme }) => `${theme.colors.primary}20`};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 40rem;
+  }
 `
 
 interface ItemProps {

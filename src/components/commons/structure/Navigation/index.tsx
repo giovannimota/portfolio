@@ -15,15 +15,7 @@ import {
   TitleContainer
 } from './styles'
 
-interface Props {
-  // Props
-}
-
-export const Navigation: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
+export const Navigation: React.FC = () => {
   // States
   const [isOpen, setIsOpen] = useState(false)
 

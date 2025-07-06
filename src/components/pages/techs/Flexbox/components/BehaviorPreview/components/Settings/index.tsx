@@ -10,16 +10,15 @@ import { EnvironmentSettings } from './components/EnvironmentSettings'
 // Hooks
 import { useSettings } from './hooks/useSettings'
 
+// Utils
+import { TABS } from './constants'
+
 // Styles
 import { Container } from './styles'
 
 export const Settings: React.FC = () => {
   // Hooks
   const { view, handleViewChange } = useSettings()
-  const TABS = [
-    { title: 'Container', value: 'container' },
-    { title: 'Items', value: 'items' }
-  ]
 
   // Functions
   function renderView() {
