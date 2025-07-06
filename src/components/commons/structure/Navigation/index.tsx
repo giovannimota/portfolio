@@ -44,7 +44,9 @@ export const Navigation: React.FC<Props> = (
 
   // Functions
   function checkIsActive(path: string) {
-    return path === pathname
+    if (path === '/') return pathname === '/'
+
+    return pathname.includes(path)
   }
 
   function renderButtons() {
