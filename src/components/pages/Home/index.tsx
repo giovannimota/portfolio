@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
       <Content>
         <Intro />
 
-        <Languages />
+        {/* <Languages /> */}
 
         <Skills />
 
