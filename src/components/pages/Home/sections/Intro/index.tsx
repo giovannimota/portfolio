@@ -31,7 +31,7 @@ export const Intro: React.FC = () => {
 
           <Typography>
             I have a little bit more than 4 years of experience. I develop web
-            and mobile applications, i have knowledge in React, React Native,
+            and mobile applications, I have knowledge in React, React Native,
             NextJS and Figma.
           </Typography>
 
