@@ -22,8 +22,6 @@ export const EnvironmentSettings: React.FC<Props> = (
 ) => {
   return (
     <Container>
-      <Typography variant="b2">Settings</Typography>
-
       <SettingsList
         title="Flex Direction"
         field="flexDirection"

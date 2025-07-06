@@ -2,29 +2,18 @@
 import React from 'react'
 
 // Components
-import { ItemsSettings } from './components/ItemsSettings'
+import { Settings } from './components/Settings'
 import { EnvironmentView } from './components/EnvironmentView'
-import { EnvironmentSettings } from './components/EnvironmentSettings'
 
 // Styles
 import { Container } from './styles'
 
-interface Props {
-  // Props
-}
-
-export const BehaviorPreview: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
+export const BehaviorPreview: React.FC = () => {
   return (
     <Container>
       <EnvironmentView />
 
-      <EnvironmentSettings />
-
-      <ItemsSettings />
+      <Settings />
     </Container>
   )
 }

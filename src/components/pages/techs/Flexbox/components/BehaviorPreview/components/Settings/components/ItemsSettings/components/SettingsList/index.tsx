@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 // Components
 import { CheckBox } from '@components/toolkit/CheckBox'
 import { Typography } from '@components/toolkit/Typography'
-import { FlexboxConfig } from '@pages/techs/Flexbox/hooks/useFlexboxContext/types'
 
 // Hooks
 import { useFlexboxContext } from '@pages/techs/Flexbox/hooks/useFlexboxContext'
 
 // Types
 import type { CheckBoxItem } from '@components/toolkit/CheckBox/types'
+import type { FlexItemConfig } from '@pages/techs/Flexbox/hooks/useFlexboxContext/types'
 
 // Styles
 import { Container } from './styles'
@@ -19,7 +19,7 @@ interface Props {
   title: string
   multiple?: boolean
   options: CheckBoxItem[]
-  field: keyof FlexboxConfig
+  field: keyof FlexItemConfig
 }
 
 export const SettingsList: React.FC<Props> = ({
@@ -29,12 +29,12 @@ export const SettingsList: React.FC<Props> = ({
   options
 }) => {
   // Hooks
-  const { flexboxConfig, updateFlexboxConfig } = useFlexboxContext()
+  const { flexItemConfig, updateFlexItemConfig } = useFlexboxContext()
 
   // Functions
   function handleChange(option: CheckBoxItem) {
     const newValue = option.value
-    updateFlexboxConfig({ [field]: newValue })
+    updateFlexItemConfig({ [field]: newValue })
   }
 
   function renderSettings() {
@@ -42,7 +42,7 @@ export const SettingsList: React.FC<Props> = ({
       <CheckBox
         key={`item-${option.value}`}
         option={option}
-        selected={option.value === flexboxConfig[field]}
+        selected={option.value === flexItemConfig[field]}
         onChange={() => handleChange(option)}
       />
     ))
