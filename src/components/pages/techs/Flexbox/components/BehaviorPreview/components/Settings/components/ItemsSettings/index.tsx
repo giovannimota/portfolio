@@ -1,9 +1,8 @@
 // External Libraries
-import React from 'react'
+import React, { useState } from 'react'
 
 // Components
 import { SettingsList } from './components/SettingsList'
-import { Typography } from '@components/toolkit/Typography'
 
 // Utils
 import { FLEX_ITEM_OPTIONS } from './constants'
@@ -11,27 +10,32 @@ import { FLEX_ITEM_OPTIONS } from './constants'
 // Styles
 import { Container } from './styles'
 
-interface Props {
-  // Props
-}
+export const ItemsSettings: React.FC = () => {
+  // States
+  const [opened, setOpened] = useState('width')
 
-export const ItemsSettings: React.FC<Props> = (
-  {
-    /* Props */
+  // Functions
+  function handleAccordionClick(value: string) {
+    const newValue = opened === value ? '' : value
+    setOpened(newValue)
   }
-) => {
+
   return (
     <Container>
       <SettingsList
         title="Width"
         field="width"
+        isOpen={opened === 'width'}
         options={FLEX_ITEM_OPTIONS.width}
+        onAccordionClick={handleAccordionClick}
       />
 
       <SettingsList
         title="Height"
         field="height"
+        isOpen={opened === 'height'}
         options={FLEX_ITEM_OPTIONS.height}
+        onAccordionClick={handleAccordionClick}
       />
     </Container>
   )

@@ -12,14 +12,6 @@ export const FLEX_ITEM_OPTIONS: FlexItemOptions = {
       value: 'auto'
     },
     {
-      label: 'Fit content',
-      value: 'fit-content'
-    },
-    {
-      label: 'Max content',
-      value: 'max-content'
-    },
-    {
       label: '100%',
       value: '100%'
     },
@@ -40,14 +32,6 @@ export const FLEX_ITEM_OPTIONS: FlexItemOptions = {
     {
       label: 'Auto',
       value: 'auto'
-    },
-    {
-      label: 'Fit content',
-      value: 'fit-content'
-    },
-    {
-      label: 'Max content',
-      value: 'max-content'
     },
     {
       label: '100%',

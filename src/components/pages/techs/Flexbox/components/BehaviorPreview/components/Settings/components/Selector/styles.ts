@@ -23,7 +23,7 @@ export const Tab = styled.button<TabProps>`
   border-radius: 0.25rem;
   background-color: ${({ theme, $selected }) =>
     $selected ? theme.colors.primary : theme.colors.black};
-  border: 1px solid ${({ theme }) => theme.colors.border.default};
+  border: 1px solid ${({ theme }) => theme.colors.border.primary};
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 `

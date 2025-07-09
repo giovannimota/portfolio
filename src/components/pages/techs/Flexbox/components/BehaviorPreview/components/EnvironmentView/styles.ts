@@ -11,7 +11,7 @@ interface ContainerProps {
 export const Container = styled(motion.div)<ContainerProps>`
   width: 100%;
   min-height: 5rem;
-  max-height: 30rem;
+  height: 100%;
 
   display: flex;
   flex-direction: ${({ $flexDirection }) => $flexDirection};
@@ -45,6 +45,7 @@ export const FlexItem = styled(motion.div)<ItemProps>`
 
   flex-shrink: 0;
 
+  padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: ${({ theme, $backgroundColor }) =>
     $backgroundColor || theme.colors.primary};

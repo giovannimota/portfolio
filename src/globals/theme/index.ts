@@ -11,7 +11,8 @@ const theme = {
     },
 
     border: {
-      default: '#3B3B3B'
+      default: '#3B3B3B',
+      primary: '#094882'
     },
 
     black: '#000000',

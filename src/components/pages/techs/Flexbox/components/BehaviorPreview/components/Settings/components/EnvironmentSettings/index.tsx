@@ -1,5 +1,5 @@
 // External Libraries
-import React from 'react'
+import React, { useState } from 'react'
 
 // Components
 import { SettingsList } from './components/SettingsList'
@@ -11,33 +11,40 @@ import { FLEXBOX_OPTIONS } from './constants'
 // Styles
 import { Container } from './styles'
 
-interface Props {
-  // Props
-}
+export const EnvironmentSettings: React.FC = () => {
+  // States
+  const [opened, setOpened] = useState('flexDirection')
 
-export const EnvironmentSettings: React.FC<Props> = (
-  {
-    /* Props */
+  // Functions
+  function handleAccordionClick(value: string) {
+    const newValue = opened === value ? '' : value
+    setOpened(newValue)
   }
-) => {
+
   return (
     <Container>
       <SettingsList
         title="Flex Direction"
         field="flexDirection"
+        isOpen={opened === 'flexDirection'}
         options={FLEXBOX_OPTIONS.flexDirection}
+        onAccordionClick={handleAccordionClick}
       />
 
       <SettingsList
         title="Align Items"
         field="alignItems"
+        isOpen={opened === 'alignItems'}
         options={FLEXBOX_OPTIONS.alignItems}
+        onAccordionClick={handleAccordionClick}
       />
 
       <SettingsList
         title="Justify Content"
         field="justifyContent"
+        isOpen={opened === 'justifyContent'}
         options={FLEXBOX_OPTIONS.justifyContent}
+        onAccordionClick={handleAccordionClick}
       />
     </Container>
   )
