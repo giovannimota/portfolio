@@ -1,24 +1,51 @@
 // External Libraries
-import React from 'react'
+import React, { useState } from 'react'
 
 // Components
-import { Typography } from '@components/toolkit/Typography'
+import { TheoryView } from './views/TheoryView'
+import { PracticeView } from './views/PracticeView'
+import { Header } from '@components/structure/Header'
+import { PageHeader } from '@components/structure/PageHeader'
+import { Navigation } from '@components/structure/Navigation'
+import { PositionSelector } from './components/PositionSelector'
+
+// Utils
+import { POSITION_TABS, VIEW_TABS } from './constants'
 
 // Styles
-import { Container } from './styles'
+import { Container, PageContent } from './styles'
 
-interface Props {
-  // Props
-}
+export const Position: React.FC = () => {
+  // States
+  const [view, setView] = useState('theory')
+  const [selectedPosition, setSelectedPosition] = useState('static')
 
-export const Position: React.FC<Props> = (
-  {
-    /* Props */
+  // Functions
+  function renderContent() {
+    if (view === 'practice')
+      return <PracticeView position={selectedPosition as any} />
+    return <TheoryView position={selectedPosition as any} />
   }
-) => {
+
   return (
     <Container>
-      <Typography variant="body">Section in development</Typography>
+      <Header title="Learn Front-End | Flexbox" />
+
+      <Navigation />
+
+      <PageContent>
+        <PageHeader title="Position" />
+
+        <PositionSelector
+          tabs={POSITION_TABS}
+          value={selectedPosition}
+          onChange={setSelectedPosition}
+        />
+
+        <PositionSelector tabs={VIEW_TABS} value={view} onChange={setView} />
+
+        {renderContent()}
+      </PageContent>
     </Container>
   )
 }

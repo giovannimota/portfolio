@@ -6,40 +6,38 @@ export interface Skill {
 export const FRONT_SKILLS: Skill[] = [
   {
     title: '',
-    description:
-      'Development of responsive and high-performance web applications using React.js and Next.js'
-  },
-  {
-    title: '',
-    description: 'Mobile application development with React Native'
+    description: 'Web application development with React.js and Next.js'
   },
   {
     title: '',
     description:
-      'Skilled in both interpreting and creating UI/UX designs using Figma, ensuring seamless alignment between design and development'
+      'Mobile application development for iOS and Android using React Native'
+  },
+  {
+    title: '',
+    description: 'Integration of REST APIs using Fetch and Axios'
+  },
+  {
+    title: '',
+    description: 'Experience with React Hooks, Context API and Redux'
   },
   {
     title: '',
     description:
-      'Styling with CSS, styled-components, and modern CSS-in-JS techniques'
-  },
-  {
-    title: '',
-    description: 'State management using Context API and Redux'
-  },
-  {
-    title: '',
-    description: 'Integration of RESTful APIs using Fetch and Axios'
+      'Styling with CSS, styled-components, Tailwind and modern CSS-in-JS techniques'
   },
   {
     title: '',
     description:
-      'Deployment and configuration of front-end applications using Vercel'
+      'UI/UX interpretation and creation using Figma, ensuring design-to-code consistency'
   },
   {
     title: '',
-    description:
-      'Experience with React Hooks and integration of various external libraries for extended functionality'
+    description: 'Front-end deployment and configuration on Vercel'
+  },
+  {
+    title: '',
+    description: 'Integration of external libraries'
   }
 ]
 
@@ -47,21 +45,22 @@ export const BACK_SKILLS: Skill[] = [
   {
     title: '',
     description:
-      'Experience with Node.js, including creation of simple APIs and route handling'
+      'Development of simple APIs using Node.js, Java, and Express.js'
   },
   {
     title: '',
     description:
-      'Basic understanding of Express and use of middlewares for request handling and logic separation'
+      'Implementation of middlewares for business logic and request handling'
   },
   {
     title: '',
     description:
-      'Familiar with REST architecture, HTTP methods, and status codes'
+      'Understanding of REST architecture, HTTP methods, and status codes'
   },
   {
     title: '',
-    description: 'Basic knowledge of database structure, queries, and tools'
+    description:
+      'Basic knowledge of relational databases, SQL queries, and data management tools'
   }
 ]
 
@@ -69,16 +68,16 @@ export const GENERAL_SKILLS: Skill[] = [
   {
     title: '',
     description:
-      'Use of Git with workflows such as Gitflow, and version control via GitHub and GitLab'
+      'Version control with Git, following the Gitflow workflow, using GitHub and GitLab'
   },
   {
     title: '',
     description:
-      'Comfortable working with advanced JavaScript/TypeScript concepts and best practices'
+      'Proficient in JavaScript and TypeScript, applying coding standards and best practices'
   },
   {
     title: '',
-    description: 'Advanced English for written and spoken communication'
+    description: 'Advanced English (reading, writing, and speaking)'
   }
 ]
 

@@ -17,7 +17,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
 
-  gap: 0.75rem;
+  gap: 1rem;
   padding: 1rem;
 `
 

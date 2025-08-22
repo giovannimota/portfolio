@@ -2,9 +2,9 @@
 import React from 'react'
 
 // Components
-import { PageHeader } from './components/PageHeader'
 import { Header } from '@components/structure/Header'
 import { Navigation } from '@components/structure/Navigation'
+import { PageHeader } from '@components/structure/PageHeader'
 import { BehaviorPreview } from './components/BehaviorPreview'
 
 // Hooks
@@ -22,7 +22,11 @@ export const Flexbox: React.FC = () => {
         <Navigation />
 
         <PageContent>
-          <PageHeader />
+          <PageHeader
+            title="Learn Flexbox"
+            description="In this section I will teach how to use CSS Flexbox to create flexible
+        and responsive layouts"
+          />
 
           <BehaviorPreview />
         </PageContent>

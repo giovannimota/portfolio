@@ -36,7 +36,8 @@ interface ItemProps {
 }
 
 export const FlexItem = styled(motion.div)<ItemProps>`
-  width: ${({ $width }) => $width || '5rem'};
+  ${({ $width }) => $width === '100%' && 'flex-grow: 1;'}
+  width: ${({ $width }) => ($width !== '100%' && $width) || '5rem'};
   height: ${({ $height }) => $height || '5rem'};
 
   display: flex;
