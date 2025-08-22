@@ -40,8 +40,6 @@ Then open [http://localhost:3000](http://localhost:3000) with your browser to se
 
 `components/` — Reusable UI components
 
-`styles/` — Tailwind config and global styles
-
 `public/` — Static assets
 
 `lib/` — Utilities and API helpers
