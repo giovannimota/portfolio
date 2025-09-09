@@ -2,14 +2,29 @@
 import React from 'react'
 
 // Components
+import TextScramble from '@components/toolkit/TextScramble'
 
 // Styles
-import { Container } from './styles'
+import { Box, Container } from './styles'
 
-interface Props {
-  // Props
-}
+export const StaticView: React.FC = ({}) => {
+  return (
+    <Container>
+      <Box>
+        <TextScramble text="Div 1" textVariant="h4" />
+      </Box>
 
-export const StaticView: React.FC<Props> = ({/* Props */}) => {
-  return <Container>{/* Code */}</Container>
+      <Box>
+        <TextScramble text="Div 2" textVariant="h4" />
+      </Box>
+
+      <Box>
+        <TextScramble text="Div 3" textVariant="h4" />
+      </Box>
+
+      <Box>
+        <TextScramble text="Div 4" textVariant="h4" />
+      </Box>
+    </Container>
+  )
 }

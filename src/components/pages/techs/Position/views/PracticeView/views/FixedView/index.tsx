@@ -2,14 +2,31 @@
 import React from 'react'
 
 // Components
+import TextScramble from '@components/toolkit/TextScramble'
 
 // Styles
-import { Container } from './styles'
+import { Box, Container, FixedBox } from './styles'
 
-interface Props {
-  // Props
-}
+export const FixedView: React.FC = () => {
+  return (
+    <Container>
+      <FixedBox>
+        <Box>
+          <TextScramble text="Div with Fixed" textVariant="h4" />
+        </Box>
+      </FixedBox>
 
-export const FixedView: React.FC<Props> = ({/* Props */}) => {
-  return <Container>{/* Code */}</Container>
+      <Box>
+        <TextScramble text="Div 1" textVariant="h4" />
+      </Box>
+
+      <Box>
+        <TextScramble text="Div 2" textVariant="h4" />
+      </Box>
+
+      <Box>
+        <TextScramble text="Div 3" textVariant="h4" />
+      </Box>
+    </Container>
+  )
 }

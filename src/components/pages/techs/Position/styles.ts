@@ -1,3 +1,4 @@
+import { ScrollStyles } from '@globals/theme'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -14,4 +15,6 @@ export const PageContent = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  ${ScrollStyles};
 `

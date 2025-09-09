@@ -1,3 +1,4 @@
+import { breakpoints } from '@styles/breakpoints'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -9,6 +10,16 @@ export const Container = styled.div`
 
   gap: 1rem;
   padding: 1rem;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 `
 
 interface TabProps {
