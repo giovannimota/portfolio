@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Chrome (Client)",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug Next.js Server",
+      "type": "node",
+      "request": "attach",
+      "port": 9230,
+      "restart": true,
+      "protocol": "inspector",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    },
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/next",
+      "args": ["dev"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/.next/**/*.js"],
+      "sourceMaps": true,
+      "trace": true
+    },
+    {
+      "name": "Next.js: attach client-side",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222, // Or the port your browser is debugging on
+      "urlFilter": "http://localhost:3000/*", // Or your Next.js URL
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack Debug (Server + Client)",
+      "configurations": ["Debug Next.js Server", "Attach to Chrome (Client)"]
+    }
+  ]
+}

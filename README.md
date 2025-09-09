@@ -62,6 +62,16 @@ Want to dive deeper into the tools used here?
 
 [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) – Instant deployment and serverless support
 
+## Debug
+
+Use the command:
+
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 \
+  --user-data-dir=/tmp/chrome-debug
+```
+
 ## 📦 Deploy
 
 This portfolio is deployed using Vercel, allowing seamless CI/CD and edge function support. You can easily deploy your own version with one click:
