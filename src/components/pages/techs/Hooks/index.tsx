@@ -2,23 +2,34 @@
 import React from 'react'
 
 // Components
-import { Typography } from '@components/toolkit/Typography'
+import { Header } from '@components/structure/Header'
+import { ContentSection } from './components/ContentSection'
+import { Navigation } from '@components/structure/Navigation'
+import { PageHeader } from '@components/structure/PageHeader'
+
+// Utils
+import {
+  USE_REDUCER_CONTENT,
+  USE_STATE_CONTENT
+} from './components/ContentSection/constants'
 
 // Styles
-import { Container } from './styles'
+import { Container, PageContent } from './styles'
 
-interface Props {
-  // Props
-}
-
-export const Hooks: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
+export const Hooks: React.FC = () => {
   return (
     <Container>
-      <Typography variant="body">Section in development</Typography>
+      <Header title="Learn Front-End | Hooks" />
+
+      <Navigation />
+
+      <PageContent>
+        <PageHeader title="Hooks" />
+
+        <ContentSection content={USE_STATE_CONTENT} />
+
+        <ContentSection content={USE_REDUCER_CONTENT} />
+      </PageContent>
     </Container>
   )
 }
