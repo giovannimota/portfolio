@@ -1,10 +1,12 @@
 // External Libraries
 import React from 'react'
 import Editor from 'react-simple-code-editor'
-import { highlight, languages } from 'prismjs/components/prism-core'
+import { highlight, languages } from 'prismjs'
 import 'prismjs/themes/prism.css'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-jsx'
 
 // Components
 
@@ -30,7 +32,7 @@ export const CodeView: React.FC<Props> = ({ code }) => {
           backgroundColor: '#1d1d1d',
           fontFamily: '"Fira code", "Fira Mono", monospace'
         }}
-        highlight={code => highlight(code, languages.js)}
+        highlight={code => highlight(code, languages.jsx!, 'jsx')}
         onValueChange={console.log}
       />
     </Container>

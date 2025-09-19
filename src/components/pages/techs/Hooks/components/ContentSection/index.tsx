@@ -3,13 +3,13 @@ import React from 'react'
 
 // Components
 import { CodeView } from './components/CodeView'
+import { Typography } from '@components/toolkit/Typography'
 
 // Types
 import { Content } from './types'
 
 // Styles
 import { Container } from './styles'
-import { Typography } from '@components/toolkit/Typography'
 
 interface Props {
   content: Content[]
