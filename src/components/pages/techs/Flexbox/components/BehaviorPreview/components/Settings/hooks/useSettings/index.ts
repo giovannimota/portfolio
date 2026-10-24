@@ -2,7 +2,6 @@
 import { useState } from 'react'
 
 // Types
-import { UseSettingsParams } from './types'
 
 export function useSettings() {
   // States

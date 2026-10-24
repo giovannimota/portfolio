@@ -6,9 +6,7 @@ import React from 'react'
 // Styles
 import { Container, ProfilePicture } from './styles'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const ProfileCard: React.FC<Props> = (
   {
@@ -21,7 +19,7 @@ export const ProfileCard: React.FC<Props> = (
         width={250}
         height={250}
         priority={false}
-        src="/images/me.jpeg"
+        src="/images/giovanni-mota-profile.jpg"
         alt="Giovanni Profile Picture"
       />
     </Container>

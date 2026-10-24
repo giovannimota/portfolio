@@ -26,11 +26,8 @@ export default function TextScramble({
   const [frame, setFrame] = useState(0)
 
   useEffect(() => {
-    let interval: NodeJS.Timeout
-    let complete = false
-
     const scramble = () => {
-      setOutput(prev => {
+      setOutput(() => {
         let result = ''
         for (let i = 0; i < text.length; i++) {
           if (i < frame) {
@@ -49,7 +46,7 @@ export default function TextScramble({
       }
     }
 
-    interval = setInterval(scramble, speed)
+    const interval = setInterval(scramble, speed)
 
     return () => clearInterval(interval)
   }, [text, speed, frame])

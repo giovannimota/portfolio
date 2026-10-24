@@ -11,9 +11,7 @@ import { MY_LANGUAGES } from './constants'
 import { Container, LanguagesContainer } from './styles'
 import { Typography } from '@components/toolkit/Typography'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const Languages: React.FC<Props> = (
   {

@@ -4,26 +4,26 @@ export const TECHS: Tech[] = [
   {
     title: 'React Hooks',
     description: 'Learn how to use React Hooks',
-    path: '/react-hooks'
+    path: 'react-hooks'
   },
   {
     title: 'Flexbox',
     description: 'Learn how to use CSS Flexbox',
-    path: '/flexbox'
+    path: 'flexbox'
   },
   {
     title: 'SWR',
     description: 'A React Hooks library for data fetching',
-    path: '/swr'
+    path: 'swr'
   },
   {
     title: 'Position',
     description: 'Learn how to use CSS position property',
-    path: '/position'
+    path: 'position'
   },
   {
     title: 'CSR, SSR and SSG',
     description: 'Learn the differences between CSR, SSR and SSG',
-    path: '/csr-ssr-ssg'
+    path: 'csr-ssr-ssg'
   }
 ]

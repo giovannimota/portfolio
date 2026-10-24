@@ -1,5 +1,5 @@
 // External Libraries
-import React, { useState } from 'react'
+import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 // Components
@@ -22,7 +22,6 @@ import { Container, ExpandButton, ListContainer } from './styles'
 interface Props {
   title: string
   isOpen?: boolean
-  multiple?: boolean
   options: CheckBoxItem[]
   field: keyof FlexboxConfig
   onAccordionClick: (value: string) => void
@@ -33,7 +32,6 @@ export const SettingsList: React.FC<Props> = ({
   field,
   isOpen,
   options,
-  multiple,
   onAccordionClick
 }) => {
   // Hooks

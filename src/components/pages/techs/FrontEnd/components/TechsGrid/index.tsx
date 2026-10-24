@@ -14,9 +14,7 @@ import { TECHS } from './constants'
 // Styles
 import { Container, TechsContainer } from './styles'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const TechsGrid: React.FC<Props> = (
   {

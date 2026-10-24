@@ -1,3 +1,1 @@
-export interface UseSettingsParams {
-  // Params
-}
+export type UseSettingsParams = Record<string, never>

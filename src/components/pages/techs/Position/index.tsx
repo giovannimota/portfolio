@@ -11,6 +11,7 @@ import { PositionSelector } from './components/PositionSelector'
 
 // Utils
 import { POSITION_TABS, VIEW_TABS } from './constants'
+import type { Position as PositionType } from './types'
 
 // Styles
 import { Container, PageContent } from './styles'
@@ -23,8 +24,8 @@ export const Position: React.FC = () => {
   // Functions
   function renderContent() {
     if (view === 'practice')
-      return <PracticeView position={selectedPosition as any} />
-    return <TheoryView position={selectedPosition as any} />
+      return <PracticeView position={selectedPosition as PositionType} />
+    return <TheoryView position={selectedPosition as PositionType} />
   }
 
   return (

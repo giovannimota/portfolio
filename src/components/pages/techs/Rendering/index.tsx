@@ -7,9 +7,7 @@ import { Typography } from '@components/toolkit/Typography'
 // Styles
 import { Container } from './styles'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const Rendering: React.FC<Props> = (
   {

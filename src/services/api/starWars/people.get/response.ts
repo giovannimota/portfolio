@@ -1,7 +1,7 @@
 export interface HttpResponse {
   count: number
   next: string
-  previous: any
+  previous: string | null
   results: People[]
 }
 

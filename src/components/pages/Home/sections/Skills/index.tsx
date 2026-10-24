@@ -1,68 +1,21 @@
-// External Libraries
 import React from 'react'
+import { ScrollReveal } from '../../../../animations/ScrollReveal'
+import { PortfolioCopy } from '../../content'
+import { Eyebrow, Section, SectionHead, SectionTitle, Skill, SkillGrid } from '../../styles'
 
-// Components
-import { Typography } from '@components/toolkit/Typography'
+// Keep adjacent skill blocks from starting their reveal at exactly the same time.
+// eslint-disable-next-line no-magic-numbers
+const SKILL_STAGGER_MS = 90
 
-// Utils
-import {
-  BACK_SKILLS,
-  FRONT_SKILLS,
-  GENERAL_SKILLS,
-  MY_SKILLS
-} from './constants'
-
-// Styles
-import { Container, Content, SkillsContainer } from './styles'
-import TextScramble from '@components/toolkit/TextScramble'
-
-interface Props {
-  // Props
-}
-
-export const Skills: React.FC<Props> = (
-  {
-    /* Props */
-  }
-) => {
-  // Functions
-  function renderSkills(type: string) {
-    var skills = MY_SKILLS
-
-    if (type === 'front') skills = FRONT_SKILLS
-    if (type === 'back') skills = BACK_SKILLS
-    if (type === 'general') skills = GENERAL_SKILLS
-
-    return skills.map((skill, index) => (
-      <div key={index}>
-        <li>{skill.description}</li>
-      </div>
-    ))
-  }
-
-  return (
-    <Container>
-      <Content>
-        <Typography variant="h2">My skills</Typography>
-
-        <SkillsContainer>
-          <TextScramble textVariant="b1" text="FRONT-END" />
-
-          {renderSkills('front')}
-        </SkillsContainer>
-
-        <SkillsContainer>
-          <TextScramble textVariant="b1" text="BACK-END" />
-
-          {renderSkills('back')}
-        </SkillsContainer>
-
-        <SkillsContainer>
-          <TextScramble textVariant="b1" text="GENERAL" />
-
-          {renderSkills('general')}
-        </SkillsContainer>
-      </Content>
-    </Container>
-  )
-}
+export const Skills: React.FC<{ content: PortfolioCopy['skills'] }> = ({ content }) => (
+  <Section id="competencias" aria-labelledby="skills-title">
+    <SectionHead><Eyebrow>{content.eyebrow}</Eyebrow><SectionTitle id="skills-title">{content.title}</SectionTitle></SectionHead>
+    <SkillGrid>
+      {content.groups.map((group, index) => (
+        <ScrollReveal key={group.name} delay={index * SKILL_STAGGER_MS}>
+          <Skill><h3>{group.name}</h3><p>{group.items}</p></Skill>
+        </ScrollReveal>
+      ))}
+    </SkillGrid>
+  </Section>
+)

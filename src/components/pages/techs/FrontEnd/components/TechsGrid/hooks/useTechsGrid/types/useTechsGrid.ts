@@ -1,3 +1,1 @@
-export interface UseTechsGridParams {
-  // Params
-}
+export type UseTechsGridParams = Record<string, never>

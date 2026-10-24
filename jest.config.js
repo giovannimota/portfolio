@@ -1,3 +1,5 @@
+// Jest's supported configuration format for this repository uses CommonJS.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({

@@ -1,53 +1,26 @@
-// External Libraries
+import Image from 'next/image'
 import React from 'react'
+import { ScrollReveal } from '../../../../animations/ScrollReveal'
+import { PortfolioCopy, PORTFOLIO_LINKS } from '../../content'
+import { ButtonRow, Eyebrow, Hero, HeroTitle, ImageCaption, Lead, Muted, Portrait, PortraitWrap, PrimaryLink, UnderlineLink } from '../../styles'
 
-// Components
-import { ProfileCard } from './components/ProfileCard'
-import TextScramble from '@components/toolkit/TextScramble'
-import { Typography } from '@components/toolkit/Typography'
-
-// Styles
-import { Container, Grid, IntroContainer, IntroTitle } from './styles'
-import theme from '@globals/theme'
-
-export const Intro: React.FC = () => {
-  return (
-    <Container>
-      <Grid>
-        <ProfileCard />
-
-        <IntroContainer>
-          <IntroTitle>
-            <TextScramble text="I'm" textVariant="h4" />
-
-            <TextScramble
-              text="Giovanni Mota"
-              textVariant="h4"
-              textColor={theme.colors.primary}
-            />
-          </IntroTitle>
-
-          <Typography>I'm a front-end developer, from Brazil.</Typography>
-
-          <Typography>
-            I have a little bit more than 4 years of experience. I develop web
-            and mobile applications, I have knowledge in React, React Native,
-            NextJS and Figma.
-          </Typography>
-
-          <Typography>
-            I am also develop some projects with SwiftUI, NodeJS (Express) and
-            Java (Spring Boot).
-          </Typography>
-
-          <Typography>So, welcome to my portfolio!</Typography>
-
-          <Typography>
-            Scroll down to know more about me and feel free to explore the other
-            tabs.
-          </Typography>
-        </IntroContainer>
-      </Grid>
-    </Container>
-  )
-}
+export const Intro: React.FC<{ content: PortfolioCopy['hero'] }> = ({ content }) => (
+  <Hero id="sobre" aria-labelledby="hero-title">
+    <div>
+      <ScrollReveal><Eyebrow>{content.eyebrow}</Eyebrow></ScrollReveal>
+      <HeroTitle id="hero-title">{content.title}</HeroTitle>
+      <ScrollReveal delay={100}><Lead>{content.intro}</Lead></ScrollReveal>
+      <ScrollReveal delay={180}><Muted>{content.note}</Muted></ScrollReveal>
+      <ScrollReveal delay={240}>
+        <ButtonRow>
+          <PrimaryLink href="#projetos">{content.projects}<span className="arrow" aria-hidden="true">↘</span></PrimaryLink>
+          <UnderlineLink href={PORTFOLIO_LINKS.email}>{content.contact}</UnderlineLink>
+        </ButtonRow>
+      </ScrollReveal>
+    </div>
+    <PortraitWrap className="portrait-wrap">
+      <Portrait><Image src="/images/giovanni-mota-profile.jpg" alt={content.portraitAlt} fill priority sizes="(max-width:760px) 80vw, 34vw" /></Portrait>
+      <ImageCaption><span>GIOVANNI MOTA</span><span>{content.location}</span></ImageCaption>
+    </PortraitWrap>
+  </Hero>
+)

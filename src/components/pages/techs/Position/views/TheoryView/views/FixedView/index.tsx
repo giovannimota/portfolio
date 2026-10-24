@@ -6,9 +6,7 @@ import React from 'react'
 // Styles
 import { Container } from './styles'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const FixedView: React.FC<Props> = ({/* Props */}) => {
   return <Container>{/* Code */}</Container>

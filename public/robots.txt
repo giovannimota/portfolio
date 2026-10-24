@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giovanni-mota-portfolio.vercel.app/sitemap.xml

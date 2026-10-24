@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 // Components
 import { SettingsList } from './components/SettingsList'
-import { Typography } from '@components/toolkit/Typography'
 
 // Utils
 import { FLEXBOX_OPTIONS } from './constants'

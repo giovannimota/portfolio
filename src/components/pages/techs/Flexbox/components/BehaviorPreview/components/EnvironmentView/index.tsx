@@ -11,9 +11,7 @@ import { useFlexboxContext } from '@pages/techs/Flexbox/hooks/useFlexboxContext'
 // Styles
 import { Container, FlexItem } from './styles'
 
-interface Props {
-  // Props
-}
+type Props = Record<string, never>
 
 export const EnvironmentView: React.FC<Props> = (
   {
