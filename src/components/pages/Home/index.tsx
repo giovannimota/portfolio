@@ -54,6 +54,11 @@ export const Home: React.FC = () => {
       <GlobalStyle />
       <Head>
         <title>{content.meta.title}</title>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0b1017" />
         <meta name="description" content={content.meta.description} />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://giovanni-mota-portfolio.vercel.app/" />
